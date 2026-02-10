@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: orderly
+
+logging:
+  level:
+    com.luxbit.kafka.orderly: INFO
