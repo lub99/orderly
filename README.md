@@ -66,13 +66,14 @@ This JSON is friendly for Go consumers (no Java-specific type headers).
 
 ### Configuration
 
-- Kafka bootstrap servers are configured in `application.yml`:
+- Kafka bootstrap servers are configured for the **multi-node** cluster (3 brokers, EXTERNAL listeners):
 
 ```yaml
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
 ```
 
-Adjust the value to match your Kafka cluster if needed.
+- `localhost:9092` → broker-1, `localhost:9093` → broker-2, `localhost:9094` → broker-3  
+- Override in `application-local.yml` (or env) if your cluster uses different addresses.
 

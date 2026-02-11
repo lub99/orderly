@@ -1,6 +1,7 @@
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    # Multi-node cluster
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
 
 logging:
   level:
